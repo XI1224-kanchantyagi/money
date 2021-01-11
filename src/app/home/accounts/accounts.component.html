@@ -1,0 +1,31 @@
+<div *ngIf="accountsData">
+    <div class="table-caption">
+        <h2>All Accounts</h2>
+        <button (click)="goToAddAccount()">Add Account</button>
+    </div>
+    <table>
+        <tr class="table-row">
+            <th class="table-col">Account</th>
+            <th class="table-col">Date</th>
+            <th class="table-col">Payee</th>
+            <th class="table-col">Category</th>
+            <th class="table-col">Memo</th>
+            <th class="table-col">Ooutflow</th>
+            <th class="table-col">Inflow</th>
+        </tr>
+        <ng-container *ngFor= "let account of accountsData">
+            <tr *ngIf="!isDeleted" class="table-row table-body">
+                <td class="table-col">{{ account.name }}</td>
+                <td class="table-col">{{ todaysDate | date:'MM/dd/yyyy' }}</td>
+                <td class="table-col">{{ account.payeeName }}</td>
+                <td class="table-col">{{ account.type }}</td>
+                <td class="table-col">{{ account.note }}</td>
+                <td class="table-col">{{ account.uncleared_balance }}</td>
+                <td class="table-col">{{ account.balance }}</td>
+            </tr>
+        </ng-container>
+    </table>
+</div>
+<div class="spinner-container" *ngIf="!accountsData">
+    <i class="pi pi-spin pi-spinner"></i>
+</div>

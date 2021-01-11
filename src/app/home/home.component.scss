@@ -1,0 +1,17 @@
+.home-container {
+  display: flex;
+  margin-top: 65px;
+  height: -webkit-fill-available;
+
+  .col-page {
+    padding: 30px;
+    width: -webkit-fill-available;
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col-page {
+    grid-column: 2/4;
+  }
+}

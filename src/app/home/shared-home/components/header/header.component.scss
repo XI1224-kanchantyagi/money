@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+  }
+  height: 66px;
+}
+
+.hamburger, .logout {
+  color: #ffffff;
+  cursor: pointer;
+}

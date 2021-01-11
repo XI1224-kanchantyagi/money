@@ -1,0 +1,27 @@
+.container-form {
+    .account-form {
+        width: 500px;
+        .form-control {
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+            border-color: #000000;
+            font-size: 14px !important;
+            color: #000000 !important;
+        }
+        input {
+            padding: 8px !important;
+        }
+    }
+}
+
+::ng-deep {
+    .ui-dropdown {
+        border: none !important;
+    }
+    .ui-dropdown-trigger > span {
+        font-size: 13px !important;
+        margin-top: -5px !important;
+        color: #000000 !important;
+    }
+}

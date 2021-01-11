@@ -1,0 +1,16 @@
+<div class="bg-secondary navbar-customization">
+  <nav>
+    <div class="nav-item" (click)="goToAllBudgets()">
+      <i class="fa fa-user" tooltip="User Details" placement="right"></i>
+      <div *ngIf="isOpen">All Budgets</div>
+    </div>
+    <div class="nav-item" (click)="goToAccounts()">
+      <i class="fa fa-list" tooltip="All Account" placement="right"></i>
+      <div *ngIf="isOpen">Accounts</div>
+    </div>
+    <div class="nav-item" (click)="goToPayeesList()">
+      <i class="fa fa-list" tooltip="List of payees" placement="right"></i>
+      <div *ngIf="isOpen">Payee List</div>
+    </div>
+  </nav>
+</div>
